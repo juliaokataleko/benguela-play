@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benguela Play</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- MENU MOBILE -->
+        <ul class="sidenav" id="menu-mobile">
+            <li><a class="hide-menu" href="#home">Home</a></li>
+            <li><a class="hide-menu" href="#musics">Músicas</a></li>
+            <li><a class="hide-menu" href="#singers">Cantores</a></li>
+            <li><a class="hide-menu" href="#about">Sobre</a></li>
+        </ul>
+
+        <div class="navbar-fixed">
+            <nav class="navbar z-depth-0">
+                <div class="nav-wrapper container">
+                    <a href="index.php">Benguela Play</a>
+
+                    <ul class="right light hide-on-med-and-down">
+                        <li><a class="hide-menu" href="#home">Home</a></li>
+                        <li><a class="hide-menu" href="#musics">Músicas</a></li>
+                        <li><a class="hide-menu" href="#singers">Cantores</a></li>
+                        <li><a class="hide-menu" href="#about">Sobre</a></li>
+                    </ul>
+
+                    <a href="#" data-target="menu-mobile"
+                        class="sidenav-trigger button-collapse right hide-on-large-only">
+                        <i class="material-icons">menu</i>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div id="player">
+            <h4>
+                <i class="material-icons">insert_chart</i>
+                Benguela Play</h4>
+
+            <div class="card">
+                <div class="card-image">
+                    <a href="#" class="btn-floating btn-large halfway-fab">
+                        <i class="material-icons" id="play-pause">play_arrow</i>
+                    </a>
+                </div>
+                <div class="card-content center-align">
+                    <h5>Título</h5>
+                    <p class="artist"> Artista</p>
+                    <div class="row flex" style="background: #ddd; padding: 4px">
+
+                        <div class="col s2">
+                            <a href="#" class="btn  halfway-fab" id="previous-button">
+                                <i class="material-icons" id="back-button">fast_rewind</i>
+                            </a>
+                        </div>
+
+                        <div class="col s6 range-field valign-wrapper">
+                            <div class="" id="current-duration">00:00</div>
+                            <input type="range" id="seek-bar" min="0" max="0" step="1">
+                            <div class="" id="total-duration">00:00</div>
+                        </div>
+
+
+                        <div class="col s2 range-field valign-wrapper">
+                            <div>
+                                <a href="#">
+                                    <i id="mute" class="material-icons">volume_up</i>
+                                </a>
+                            </div>
+                            <input type="range" id="vol-control" value="40" min="0" max="100" step="1">
+                        </div>
+
+                        <div class="col s2  valign-wrapper">
+                            <a href="#" class="btn" id="next-button">
+                                <i class="material-icons">fast_forward</i>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="plugins/materialize/js/materialize.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems, options);
+        });
+
+        // Initialize collapsible (uncomment the lines below if you use the dropdown variation)
+        // var collapsibleElem = document.querySelector('.collapsible');
+        // var collapsibleInstance = M.Collapsible.init(collapsibleElem, options);
+
+        // Or with jQuery
+
+        $(document).ready(function () {
+            $('.sidenav').sidenav();
+        });
+    </script>
+</body>
+
+</html>

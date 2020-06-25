@@ -1,0 +1,109 @@
+@import'assets/css/materialize.css';
+@import'assets/css/font.css';
+
+:root {
+    --main-color: #0a6bda;
+    --secondary-color: #ddad0e;
+    --tertiary-color: #292e2a;
+    --transparent: transparent;
+}
+
+.primary-color {
+   color:  var(--main-color) !important;
+} 
+
+body {
+    min-height: 100vh;
+    background-color: #ddd;
+
+}
+
+/* COLORS */
+
+.primary-bg {
+    background: var(--main-color);
+}
+
+.navbar {
+    background-color: var(--main-color);
+}
+
+#player {
+    background-color: white;
+    width: 100%;
+    margin: 1em 0px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+        0px 3px 1px -2px rgb(136, 162, 190), 0px 1px 5px 0px rgb(159, 178, 199);
+}
+
+.card {
+    box-shadow: none;
+    margin: 0;
+}
+
+h4 {
+    color: #0765d1;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+}
+
+.card-image {
+
+    /* 
+    background: url('https://placehold.it/500') no-repeat center center; */
+   
+    height: 400px;
+    width: 100%;
+}
+.artist {
+    text-transform: uppercase;
+    padding-bottom: 1em;
+}
+
+audio {
+    width: 100%;
+}
+
+#play-pause {
+    background-color: var(--main-color);
+}
+
+#mute {
+    color: var(--main-color);
+    transform: translateY(2px);
+}
+
+.btn {
+    background-color: var(--main-color);
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+}
+
+#current-duration {
+    color: var(--main-color);
+    margin-right: 5px;
+}
+
+#total-duration {
+    color: var(--main-color);
+    margin-left: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    background-color: var(--main-color);
+}
+
+input[type="range"]::-moz-range-thumb {
+    background-color: var(--main-color);
+}
+
+input[type="range"]::-ms-thumb {
+    background-color: var(--main-color);
+}
